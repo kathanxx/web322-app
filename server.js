@@ -8,7 +8,7 @@ Name: Rishi Bhatia
 Student ID: 168046217
 Date: 4-6-2023
 Cyclic Web App URL: https://long-teal-turtle-veil.cyclic.app/about
-GitHub Repository URL: 
+GitHub Repository URL: https://github.com/rishibhatia17/web322-app
 ********************************************************************************/
 
 const storeService = require('./store-service');
