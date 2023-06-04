@@ -1,5 +1,17 @@
-const storeService = require('./store-service');
 
+/*********************************************************************************
+WEB322 – Assignment 02
+I declare that this assignment is my own work in accordance with Seneca Academic Policy. 
+No part * of this assignment has been copied manually or electronically from any other 
+source (including 3rd party web sites) or distributed to other students.
+Name: Rishi Bhatia
+Student ID: 168046217
+Date: 4-6-2023
+Cyclic Web App URL: https://long-teal-turtle-veil.cyclic.app/about
+GitHub Repository URL: 
+********************************************************************************/
+
+const storeService = require('./store-service');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 8080;
