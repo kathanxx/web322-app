@@ -40,26 +40,34 @@ app.get('/shop', (req, res) => {
       });
   });
   
-  
-  app.get('/items', (req, res) => {
-    storeService.getAllItems()
-      .then((items) => {
-        res.json(items);
-      })
-      .catch((err) => {
-        res.json({ message: err });
-      });
-  });
-  
-  
-  app.get('/categories', (req, res) => {
-    storeService.getCategories()
-      .then((categories) => {
-        res.json(categories);
-      })
-      .catch((err) => {
-        res.json({ message: err });
-      });
+
+// Set up a route for /items
+app.get('/items', (req, res) => {
+  storeService.getAllItems()
+    .then((items) => {
+      res.json(items);
+    })
+    .catch((error) => {
+      res.json({ message: error });
+    });
+});
+
+// Set up a route for /categories
+app.get('/categories', (req, res) => {
+  storeService.getCategories()
+    .then((categories) => {
+      res.json(categories);
+    })
+    .catch((error) => {
+      res.json({ message: error });
+    });
+});
+
+// Route handlers for other routes
+
+storeService.initialize()
+  .catch((error) => {
+    console.error('Error initializing store service:', error);
   });
   
   
